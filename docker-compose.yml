@@ -1,10 +1,14 @@
-[supervisord]
-nodaemon=true
-
-[program:smartermail]
-command=/opt/smartermail/MailService
-directory=/opt/smartermail
-autostart=true
-autorestart=true
-stdout_logfile=/var/log/smartermail.log
-stderr_logfile=/var/log/smartermail_err.log
+services:
+  app:
+    image: peppershade/smartermail:8930
+    ports:
+      - 80:80
+      - 443:443
+      - 587:587
+      - 110:110
+      - 143:143
+      - 993:993
+      - 995:995
+    volumes:
+      - ./maildata:/var/lib/smartermail
+      - ./mailconfig:/etc/smartermail
