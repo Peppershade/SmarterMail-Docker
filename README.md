@@ -9,6 +9,12 @@ This repository contains a Docker Compose configuration to set up SmarterMail us
 - Docker installed on your machine
 - Docker Compose installed on your machine
 
+## SmarterMail
+SmarterMail is a product of SmarterTools.
+
+Info: https://www.smartertools.com/smartermail/business-email-server
+Docs: https://help.smartertools.com/SmarterMail/Current/Topics/
+
 ## Getting Started
 
 ### Clone the Repository
