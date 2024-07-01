@@ -2,6 +2,8 @@
 
 This repository contains a Docker Compose configuration to set up SmarterMail using Docker. SmarterMail is a powerful and flexible mail server for Windows, and this setup allows you to run it on Linux via Docker.
 
+Please note that this is a proof of concept, and I do not actively support this repository. Do *NOT* use in production
+
 ## Prerequisites
 
 - Docker installed on your machine
