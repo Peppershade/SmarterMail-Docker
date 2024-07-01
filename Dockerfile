@@ -1,13 +1,14 @@
 FROM ubuntu:22.04
 LABEL Author="Peppershade"
-ENV TZ="Europe/Amsterdam"
 
 # Install necessary packages and dependencies
 RUN apt-get update && apt-get install -y \
     supervisor wget libicu-dev tzdata
 
 # Set the timezone
-RUN date
+RUN apt-get install -yq tzdata && \
+    ln -fs /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
 
 # Copy supervisord configuration file
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
