@@ -21,8 +21,11 @@ RUN wget https://downloads.smartertools.com/smartermail/beta/100.0.8930.39839/sm
 # Enable build-in webserver
 RUN touch /opt/smartermail/run-webserver.txt
 
+# Change OS information
+RUN sed -i 's|PRETTY_NAME="Ubuntu 22.04.4 LTS"|PRETTY_NAME="SmarterMail Docker Ubuntu 22.04.4 LTS"|g' /usr/lib/os-release
+
 # Expose the necessary ports
-EXPOSE 80 443 587 465 25 990 993
+EXPOSE 80 443 443/udp 587 465 25 990 993 995 110 143 5222
 
 # Add volumes "/opt/smartermail" "/etc/smartermail" "/var/lib/smartermail"
 VOLUME ["/opt/smartermail", "/etc/smartermail", "/var/lib/smartermail"]

@@ -32,7 +32,7 @@ services:
     image: peppershade/smartermail:8930
     network_mode: "host"
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/Amsterdam
     volumes:
       - ./maildata:/var/lib/smartermail
       - ./mailconfig:/etc/smartermail
@@ -52,14 +52,19 @@ Set the timezone to your local timezone by modifying the `TZ` environment variab
 The ports section is commented out in the `docker-compose.yml` file because `network_mode: "host"` is used. If you need to use a different network mode, you can uncomment and configure the ports as needed.
 
 ```yaml
-# ports:
-#   - 80:80
-#   - 443:443
-#   - 587:587
-#   - 110:110
-#   - 143:143
-#   - 993:993
-#   - 995:995
+#    ports:
+#      - 80:80
+#      - 443:443
+#      - 443/udp:443/udp
+#      - 110:110
+#      - 25:25
+#      - 587:587
+#      - 110:110
+#      - 143:143
+#      - 993:993
+#      - 995:995
+#      - 465:465
+#      - 5222:5222
 ```
 
 ### Running the Service
