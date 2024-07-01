@@ -13,6 +13,7 @@ This repository contains a Docker Compose configuration to set up SmarterMail us
 SmarterMail is a product of SmarterTools.
 
 Info: https://www.smartertools.com/smartermail/business-email-server
+
 Docs: https://help.smartertools.com/SmarterMail/Current/Topics/
 
 ## Getting Started
