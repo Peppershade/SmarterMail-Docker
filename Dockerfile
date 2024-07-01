@@ -1,9 +1,13 @@
 FROM ubuntu:22.04
 LABEL Author="Peppershade"
+ENV TZ="Europe/Amsterdam"
 
 # Install necessary packages and dependencies
 RUN apt-get update && apt-get install -y \
-    supervisor wget libicu-dev
+    supervisor wget libicu-dev tzdata
+
+# Set the timezone
+RUN date
 
 # Copy supervisord configuration file
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
