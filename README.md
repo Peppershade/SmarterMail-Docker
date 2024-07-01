@@ -14,8 +14,8 @@ This repository contains a Docker Compose configuration to set up SmarterMail us
 Clone this repository to your local machine:
 
 ```sh
-git clone https://github.com/yourusername/smartermail-docker.git
-cd smartermail-docker
+git clone https://github.com/Peppershade/SmarterMail-Docker.git
+cd SmarterMail-Docker
 ```
 
 ### Configuration
